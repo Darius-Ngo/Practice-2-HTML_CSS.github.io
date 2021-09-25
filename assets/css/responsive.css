@@ -1,0 +1,205 @@
+/* Mobile and tablet */
+@media (max-width: 1023px) {
+    .hide-on-mobile-tablet {
+        display: none;
+    }
+    .header {
+        position: fixed;
+        z-index: 999;
+        left: 0;
+        right: 0;
+        top: 0;
+    }
+    
+    :root {
+        --header-height: 70px;
+        --navbar-height: 0px;
+        --header-search-height: calc(var(--header-height) - var(--navbar-height));
+    }
+    .header-seach__cart-items-name {
+        margin-right: 10%;
+    }
+    .header-seach__cart-report::before {
+        display: none;
+    }
+
+    .header-seach__cart-wrap {
+        margin: 10px 14px 0 0;
+    }
+
+    .header-mobile__navbar {
+        display: block;
+    }
+
+    .content-app {
+        padding-top: 8px;
+    }
+    .container-content {
+        margin-top: calc(var(--header-height) + var(--header__sort-bar-height)) ;
+    }
+    .header__sort-bar {
+        display: flex;
+    }
+
+    .category-mobile {
+        display: flex;
+    }
+
+    .footer__container {
+        margin-top: 0;
+    }
+    .footer__help {
+        padding: 2rem 16px;
+    }
+    .footer__app-link img {
+        height: 24px;
+        line-height: 3rem;
+        margin: 8px 0;
+    }
+
+    .footer-end {
+        height: 6rem;
+        justify-content: center;
+        background-color: #f5f5f5;
+    }
+
+}
+
+/* tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    .hide-on-tablet {
+        display: none;
+    }
+    .header-seach__cart {
+        width: 70px;
+    }
+
+    .header-seach__cart-note {
+        right: 8px;
+    }
+    .header-seach__cart-report {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: var(--header-height);
+        width: 100%;
+        padding: 0 calc((100% - 644px) /2);
+    }
+    .header-search__input {
+        margin-left: 24px;
+    }
+    .pagination-item__link {
+        margin: 0 6px;
+    }
+    .header-search__option {
+        top: 120%;
+    }
+
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+    .hide-on-mobile {
+        display: none;
+    }
+
+    .header-search {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .header-seach__cart,
+    .header-search__logo {
+        width: auto;
+    }
+    .header-mobile__search {
+        display: block;
+    }
+    .header-mobile__search,
+    .header-seach__cart-link {
+        padding: 0 16px;
+    }
+
+    .header-seach__cart-note {
+        right: 12px;
+    }
+
+    .header-seach__cart-report {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: var(--header-height);
+        width: 100%;
+        padding: 0 calc((100% - 644px) /2);
+    }
+
+    .header-search__logo-link {
+        display: block;
+        margin-left: 50%;
+    }
+    .Header-search__logo-img {
+        width: 11rem;
+    }
+
+    .header-search__input {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: var(--header-height);
+        z-index: 1;
+        padding: 0 16px;
+        height: var(--header__sort-bar-height);
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+        animation: MobileSearch linear 0.25s;
+        will-change: opacity, top;
+        display: none;
+    }
+
+    .header-search__option {
+        top: 130%;
+    }
+
+    .header-search__past {
+        position: fixed;
+        left: 0;
+        width: 100%;
+        top: calc(var(--header-height)+var(--header__sort-bar-height));
+        box-shadow: 0 1px 2px rgb(0 0 0 / 5%);
+    }
+
+    .content-app {
+        margin: 0 4px;
+    }
+
+    .home-product__pagination {
+        margin: 4rem 0;
+    }
+    .pagination-item__link {
+        margin: 0 2px;
+        font-size: 1.6rem;
+    }
+    
+    .footer__pay-img {
+        width: 16rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .pagination-item__link {
+        font-size: 1.6rem;
+        min-width: 3rem;
+    }
+}
+
+@keyframes MobileSearch {
+    from
+    {
+        opacity: 0;
+        top: calc(var(--header-height) / 2);
+    }
+    to
+    {
+        opacity: 1;
+        top: var(--header-height);
+    }
+}
